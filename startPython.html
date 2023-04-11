@@ -1,0 +1,552 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <div include-html="title.html" id="title_file"></div>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="css/button.css" rel="stylesheet" type="text/css">
+    <script src="js/button.js"></script>
+  <script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/include-html.min.js"></script>
+
+  </head>
+  <body>
+    <div include-html="header.html" id="header_file"></div>
+    
+    <div class="container-fluid" style="margin-top: 10px;">
+
+      <div id="center" class="jumbotron p-3 p-md-5 text-white rounded bg-dark" style="background-color: white !important; border: 4px double black;">
+          <div class="col-md-12 px-0">
+            <h1 class="display-4 font-italic" align="center" style="color: black;">Основы Python</h1>
+            <p class="lead my-3" align="center" style="color: black;">На данном пробном сайте вы можете ознакомится с основами Python</p>
+            <p class="lead mb-0" align="center" style="color: black;"><a href="https://www.python.org" class="text-black font-weight-bold">Ссылка на Python</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid" style="margin-top: 10px; margin-bottom: 10px;">
+          <p align="center">
+              
+              <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample_1" aria-expanded="false" aria-controls="collapseExample_1">
+                Нажмите чтобы посмотреть разбор основ Python
+              </button>
+            </p>
+            <div class="collapse" id="collapseExample_1" style="width: 100%;">
+              <div class="card card-body" style="width: 100%;">
+                  <div class="card">
+                      <div class="card-header" align="center" style="font-size: 24px;">
+                        <b>Основы Python</b>
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title" align="center" style="margin-bottom: 10px;">Основы Python</h5>
+                          <pre style="margin-bottom: 0; width: auto;">
+print() # команда для вывода информации на экран
+
+#возможные варианты использования команды print()
+
+print(5) # вывод числа (целочисленный тип данных ->
+         # обыкновенные числа используемые при счёте)
+         # Пример (-10, -9, ... 0, ... 9, 10)
+
+print(5.5) # вывод дробного числа (вещественный тип данных ->
+           # числа с остатком)
+           # Пример (-10.1, -9.2, ... 0, ... 9.5, 10.8)
+           # Примечание: В качестве разделителя ставится
+           # " . ", а не " , ".
+
+print("Привет") # вывод строчного типа данных
+                # выводить можно в таком типе данных
+                # что угодно как слова так и символы так
+                # и цифры
+                # Варианты записи print("  "), print('  ')
+
+#                   Переменные
+# Переменная это хранилище для какого либо типа данных
+# Варианты типа данных: int - целочисленный тип
+#                       float - вещественный тип
+#                       str - строковый тип данных
+#
+# Из чего состоит переменная:
+# Имя переменной, данные которые хранит переменная.
+#
+# Правила при создании имени переменной:
+# Имена переменных могут быть любой длины,
+# могут иметь заглавные и
+# строчные буквы(от A до Z, от a до z),
+# цифру(0-9) и символ подчеркивания(_).
+#
+# Переменные предназначены для хранения данных.
+# Название переменной в Python должно начинаться с
+# алфавитного символа или со знака подчеркивания
+# и может содержать алфавитно-цифровые символы
+# и знак подчеркивания.
+# И кроме того, название переменной не должно совпадать
+# с названием ключевых слов языка Python.
+#
+# Ключевых слов не так много, их легко запомнить:
+# False      await      else       import     pass
+# None       break      except     in         raise
+# True       class      finally    is         return
+# and        continue   for        lambda     try
+# as         def        from       nonlocal   while
+# assert     del        global     not        with
+# async      elif       if         or         yield
+#
+a = 5        # переменная имеет целочисленный тип данных
+b = 5.5      # переменная имеет вещественный тип данных
+c = "Привет" # переменная имеет строковый тип данных
+
+print(a)     # вывод переменной " a "
+print(b)     # вывод переменной " b "
+print(c)     # вывод переменной " c "
+
+input() #команда для ввода информации с клавиатуры
+
+# команда input() работает вместе с переменной
+# Варианты написания:
+# a = input() -> по умолчанию все что мы введём с клавиатуры
+#                будет иметь строковый тип данных
+
+a = input("Введите данные: ") # -> комментарий при вводе
+a = input('Введите данные: ') # -> комментарий при вводе
+
+# a = int(input()) - > введеные с клавиатуры данные
+#                      примут целочисленное значение
+# Примечание: если ввести символы или текст возникнет ошибка
+#
+# a = float(input()) - > введеные с клавиатуры данные
+#                      примут вещественное значение
+# Примечание: если ввести символы или текст возникнет ошибка
+#
+# a = str(input()) - > введеные с клавиатуры данные
+#                      примут строковое значение значение
+# Примечание: можно вводить что угодно
+#
+# Элементарные операции над переменными
+# 1) Операция сложения. Знак операции " + "
+# 2) Операция вычитание. Знак операции " - "
+# 3) Операция умножения. Знак операции " * "
+# 4) Операция деления. Знак операции " / "
+#   Примечание: в Python существует 3 типа деления
+#               более подробно в уроке " Типы деления "
+# 5) Операция возведение в степень. Знак операции " ** "
+
+# Примечание: Элементарные математические операции можно
+#             проводить только над типами данных int и float
+
+# Примеры элементарных операций
+a = 7
+b = 17
+print(a + b)   # умножение
+print(a - b)   # вычитание
+print(a * b)   # умножение
+print(a / b)   # деление
+print(a ** b)  # возведение в степень</pre>
+                      </div>
+                    </div>
+              </div>
+            </div>
+      
+      </div>
+
+
+
+    <div class="container-fluid" style="margin-top: 10px; margin-bottom: 10px;">
+          <p align="center">
+              
+              <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample_Type_of_Divide" aria-expanded="false" aria-controls="collapseExample_Type_of_Divide">
+                Нажмите чтобы посмотреть разбор типов деления в Python
+              </button>
+            </p>
+            <div class="collapse" id="collapseExample_Type_of_Divide" style="width: 100%;">
+              <div class="card card-body" style="width: 100%;">
+                  <div class="card">
+                      <div class="card-header" align="center" style="font-size: 24px;">
+                        <b>Типы деления в Python</b>
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title" align="center" style="margin-bottom: 10px;">Типы деления Python</h5>
+                          <pre style="margin-bottom: 0; width: auto;">
+# Типы деления в Python
+# 1) Математический: 5 / 2 = 2.5
+# 2) Узнаём целую часть от деления: 5 // 2 = 2
+# 3) Узнаём остаток от деления: 5 % 2 = 1
+
+print(5 / 2)
+print(5 // 2)
+print(5 % 2)
+
+# Найдём сумму цифр двузначного числа
+# Ввод двузначного числа с клавиатуры
+x = int(input('Введите двузначное число: '))
+# Узнаём 1 цифру (кол-во десятков),
+# методом деления №2
+x1 = x // 10
+# Узнаём 2 цифру (кол-во единиц),
+# методом деления №3
+x2 = x % 10
+# Выводим сумму цифр двузначного числа
+print(x1 + x2)
+
+# Найдём сумму цифр трёхзначного числа
+# Ввод трёхзначного числа с клавиатуры
+x = int(input('Введите трёхзначное число: '))
+# Узнаём 1 цифру (кол-во сотен),
+# методом деления №2
+x1 = x // 100
+# Узнаём 2 цифру (кол-во десятков),
+# методом деления №2 и №3
+x2 = (x // 10) % 10
+# Узнаём 3 цифру (кол-во единиц),
+# методом деления №3
+x3 = x % 10
+# Выводим сумму цифр трёхзначного числа
+print(x1 + x2 + x3)
+
+# Дано расстояние в сантиметрах.
+# Найти число полных метров в нем.
+# Введём расстояние в сантиметрах с клавиатуры
+sm = int(input("Введите расстояние в сантиметрах: "))
+# Находим число полных метров в сантиметрах
+# методом деления №2
+m = sm // 100
+print("Количество полных метров =", m)
+
+# Дана масса в килограммах. 
+# Найти число полных центнеров в ней.
+# Введём массу в килограммах с клавиатуры
+kg = int(input("Введите массу в килограммах: "))
+# Находим число полных центнеров в килограммах
+# методом деления №2
+c = kg // 100
+print("Количество полных центнеров =", kg)</pre>
+                      </div>
+                    </div>
+              </div>
+            </div>
+      
+      </div>
+
+    
+    
+
+    
+     <div class="container-fluid" style="margin-top: 10px; margin-bottom: 10px;">
+          <p align="center">
+              
+              <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample_if_elif_else" aria-expanded="false" aria-controls="collapseExample_if_elif_else">
+                Нажмите чтобы посмотреть разбор Условного оператора в Python
+              </button>
+            </p>
+            <div class="collapse" id="collapseExample_if_elif_else" style="width: 100%;">
+              <div class="card card-body" style="width: 100%;">
+                  <div class="card">
+                      <div class="card-header" align="center" style="font-size: 24px;">
+                        <b>Условный оператор в Python</b>
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title" align="center" style="margin-bottom: 10px;">Условный оператор Python</h5>
+                          <pre style="margin-bottom: 0; width: auto;">
+# Условный оператор
+# Задача: Какой дорогой мне идти в школу
+"""
+if (условие):
+    действие1 (Ответ при истине)
+else:
+    действие2 (Ответ при ложь)
+<------------------------------------------------>
+if (условие1):
+    действие1
+elif (условие2): (количество elif и действий для
+                  него может быть сколько угодно)
+    действие2
+else:
+    действие3
+"""
+# Отвечаем на вопрос "Голодны ли вы"
+# путём присвоения переменной "q" ответа да или нет
+q = input("Голодны ли вы? (Дайте ответ да или нет): ")
+print("Я", q, "голоден")
+
+if q == 'да': # Вопрос "Голоден ли Я?"
+    # Вывод при ответе на вопрос выше, что мы голодны
+    print("Идите по дороге, через Ростер Хит")
+    # Вывод при ответе на вопрос выше, что мы не голодны
+else:
+    print("Идите по дороге, напрямую в школу")
+
+# Задача: Какую цифру вы ввели?
+# Ввести натурально число с клавиатуры
+x = int(input('Введите натуральное число от 0 до 9: '))
+if x == 0:
+    print("Вы ввели -> ноль")
+elif x == 1:
+    print("Вы ввели -> один")
+elif x == 2:
+    print("Вы ввели -> два")
+elif x == 3:
+    print("Вы ввели -> три")
+elif x == 4:
+    print("Вы ввели -> четыре")
+elif x == 5:
+    print("Вы ввели -> пять")
+elif x == 6:
+    print("Вы ввели -> шесть")
+elif x == 7:
+    print("Вы ввели -> семь")
+elif x == 8:
+    print("Вы ввели -> восемь")
+elif x == 9:
+    print("Вы ввели -> девять")
+else:
+    print("Вы ввели -> другое число")</pre>
+                      </div>
+                    </div>
+              </div>
+            </div>
+      
+      </div>
+
+    
+    
+    
+    
+    
+
+
+      <div class="container-fluid" style="margin-top: 10px; margin-bottom: 10px;">
+          <p align="center">
+              
+              <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample_2" aria-expanded="false" aria-controls="collapseExample_2">
+                Нажмите чтобы посмотреть разбор задания 7.118
+              </button>
+            </p>
+            <div class="collapse" id="collapseExample_2" style="width: 100%;">
+              <div class="card card-body" style="width: 100%;">
+                  <div class="card">
+                      <div class="card-header" align="center" style="font-size: 24px;">
+                        <b>Разбор 7.118</b>
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title" align="center" style="margin-bottom: 10px;">Задание 7.188 из задачника</h5>
+                          <pre style="margin-bottom: 0; width: auto;">
+"""Даны натуральное число n и целые числа a1, a2, …, an,
+среди которых имеются числа, равные 10. Найти:
+а) номер последнего из них;
+б) номер первого из них."""
+n = int(input('Введите количество элементов a для ввода: '))
+for i in range(1,n+1):
+  print("Введите элемент A",i,": ")
+  a = int(input())
+  if a == 10:
+    countA = i
+    break #break для буквы б)
+print(countA)</pre>
+                      </div>
+                    </div>
+              </div>
+            </div>
+      
+      </div>
+
+
+  <div class="container-fluid" style="margin-top: 10px; margin-bottom: 10px;">
+          <p align="center">
+              
+              <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample_3" aria-expanded="false" aria-controls="collapseExample_3">
+                Нажмите чтобы посмотреть разбор задания 8.19
+              </button>
+            </p>
+            <div class="collapse" id="collapseExample_3" style="width: 100%;">
+              <div class="card card-body" style="width: 100%;">
+                  <div class="card">
+                      <div class="card-header" align="center" style="font-size: 24px;">
+                        <b>Разбор задания 8.19</b>
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title" align="center" style="margin-bottom: 10px;">Разбор задания 8.19</h5>
+                          <pre style="margin-bottom: 0; width: auto;">
+"""
+ Последовательность Фибоначчи образуется так: первый
+и второй члены последовательности равны 1, каждый следующий
+равен сумме двух предыдущих (1, 1, 2, 3, 5, 8, 13, ...). Найти:
+а)сумму всех чисел в последовательности Фибоначчи, которые
+не превосходят 1000;
+б)первое число в  последовательности Фибоначчи, большее n
+(значение n вводится с клавиатуры; n > 1).
+"""
+
+#а)
+x, x1, x2 = 1, 1, 1
+sum = 2
+while True:
+    x = x1 + x2
+    if x > 1000:
+        break
+    x1, x2 = x2, x
+    sum += x
+print(sum)
+
+
+#б)
+n = int(input())
+x, x1, x2 = 1, 1, 1
+while x <= n:
+    x = x1 + x2
+    x1, x2 = x2, x
+print(x)
+</pre>
+                      </div>
+                    </div>
+              </div>
+            </div>
+      
+      </div>
+
+
+
+  <div class="container-fluid" style="margin-top: 10px; margin-bottom: 10px;">
+          <p align="center">
+              
+              <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample_4" aria-expanded="false" aria-controls="collapseExample_4">
+                Нажмите чтобы посмотреть разбор темы <br>
+                "Повторение повторяющихся действий"<br>
+                            и разбор задания 9.46
+              </button>
+            </p>
+            <div class="collapse" id="collapseExample_4" style="width: 100%;">
+              <div class="card card-body" style="width: 100%;">
+                  <div class="card">
+                      <div class="card-header" align="center" style="font-size: 24px;">
+                        <b>Разбор темы "Повторение повторяющихся действий"<br>
+                            и разбор задания 9.46</b>
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title" align="center" style="margin-bottom: 10px;">Разбор темы "Повторение повторяющихся действий"<br>
+                            и разбор задания 9.46</h5>
+                          <pre style="margin-bottom: 0; width: auto;">
+# Повторение повторяющихся действий
+
+for i in range(2, 10):              # внешний цикл
+    for j in range(1, 10):          # внутренний цикл
+        print(i, "*", j, "=", i*j)  # тело цикла
+
+
+for i in range(1, 10):              # внешний цикл
+    for j in range(1, 10):          # внутренний цикл
+        print(1, end = " ")         # тело цикла
+    print()
+
+
+"""9.46*. Составить программу нахождения цифрового корня натурального числа. 
+Цифровой корень данного числа получается 
+следующим образом. Если сложить все цифры этого числа, затем все 
+цифры найденной суммы и  повторять этот процесс, то 
+в результате будет получено однозначное число (цифра), которое 
+и  называется цифровым корнем данного числа"""
+
+x = int(input())
+while x > 10:       # внешний цикл (предназначен для работы пока число не станет однозначным)
+    sum = 0
+    while x > 0:    # внутренний цикл (ищет сумму цифр цисла)
+        a = x % 10
+        sum += a
+        x //= 10
+    x = sum
+print(x)
+</pre>
+                      </div>
+                    </div>
+              </div>
+            </div>
+      
+      </div>
+    
+    
+    
+        <div class="container-fluid" style="margin-top: 10px; margin-bottom: 10px;">
+          <p align="center">
+              
+              <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample_Random" aria-expanded="false" aria-controls="collapseExample_Random">
+                Нажмите чтобы посмотреть тему: Случайные числа в Python
+              </button>
+            </p>
+            <div class="collapse" id="collapseExample_Random" style="width: 100%;">
+              <div class="card card-body" style="width: 100%;">
+                  <div class="card">
+                      <div class="card-header" align="center" style="font-size: 24px;">
+                        <b>Тема: Случайные числа в Python</b>
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title" align="center" style="margin-bottom: 10px;">Тема: Случайные числа в Python</h5>
+                          <pre style="margin-bottom: 0; width: auto;">
+"""Случайные числа в Python"""
+
+import random as rd # вызов библиотеки random
+
+a = rd.random() # рандомное значение в диапазон от 0 до 1
+print(a)
+
+a = rd.randint(-10,10) # рандомное целочисленное значение в диапазон от -10 до 10
+print(a)
+
+for i in range(15): # вывод 15 рандомных значений в диапазон от 0 до 1
+    a = rd.random()
+    print(a)
+</pre>
+                      </div>
+                    </div>
+              </div>
+            </div>  
+ 
+          
+          
+ <div class="container-fluid" style="margin-top: 10px; margin-bottom: 10px;">
+          <p align="center">
+              
+              <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample_List" aria-expanded="false" aria-controls="collapseExample_List">
+                Нажмите чтобы посмотреть тему: Списки в Python
+              </button>
+            </p>
+            <div class="collapse" id="collapseExample_List" style="width: 100%;">
+              <div class="card card-body" style="width: 100%;">
+                  <div class="card">
+                      <div class="card-header" align="center" style="font-size: 24px;">
+                        <b>Тема: Списки в Python</b>
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title" align="center" style="margin-bottom: 10px;">Тема: Списки в Python</h5>
+                          <pre style="margin-bottom: 0; width: auto;">         
+import random
+
+weather = [0] * 31
+print(weather)
+
+summ = 0
+
+for i in range(31):
+    weather[i] = random.randint(-10,15)
+    summ += weather[i]
+print(summ/31)
+
+for i in range(31):
+    if weather[i] >=0:
+        print(i+1, "марта , была температура", weather[i],"градусов")
+</pre>
+                      </div>
+                    </div>
+              </div>
+            </div>  
+    
+
+<div include-html="footer.html" id="footer_file"></div>
+      <button onclick="topFunction()" id="myBtn" title="Go to top">В начало</button>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
+</html>
